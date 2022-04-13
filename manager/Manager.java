@@ -1,0 +1,26 @@
+package ua.lviv.iot.lab2.manager;
+import ua.lviv.iot.lab2.hierarchy.Materials;
+import java.util.ArrayList;
+
+
+public class Manager {
+    private Materials[] arrOfMaterials;
+    ArrayList<String> toDoList = new ArrayList<String>();
+    public Manager(Materials[] arrOfMaterials){
+        this.arrOfMaterials=arrOfMaterials;
+        createRenovationPlan();
+        printToDoList();
+    }
+    public void createRenovationPlan(){
+        for (int i=0;i<arrOfMaterials.length;i++) {
+            toDoList.add(arrOfMaterials[i].Renovate());
+        }
+    }
+    public void printToDoList(){
+        System.out.println("To do list:");
+        for (int i=0; i<toDoList.size();i++) {
+            System.out.println(toDoList.get(i));
+        }
+        System.out.println("End.");
+    }
+}
