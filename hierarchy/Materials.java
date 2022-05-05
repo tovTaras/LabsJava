@@ -40,6 +40,15 @@ public abstract class Materials {
         this.setQuantityInKg(quantityInKg);
         this.setPreparationTime(preparationTime);
     }
+    @Override
+    public String toString() {
+        return "Machine{" +
+                " Price Per Kilo = " + pricePerKilo +
+                ", Quantity In KG = " + quantityInKg +
+                ", Preparation Time = " + preparationTime +
+                ", name = '" + name + '\'' +
+                '}';
+    }
     public abstract String Renovate();
 }
 
